@@ -1,0 +1,12 @@
+name: release-rehearsal
+on:
+  push:
+    tags:
+      - 'v*'
+permissions: {}
+jobs:
+  rehearse:
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - run: echo "release rehearsal on the throwaway repo; nothing is published"
